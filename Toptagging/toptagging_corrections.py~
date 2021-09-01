@@ -1,0 +1,60 @@
+import pandas as pd
+import numpy as np
+from collections import OrderedDict
+from correctionlib.schemav1 import Correction, Binning, Category, Formula
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import helperfunctions as hf
+from correctionlib.schemav1 import CorrectionSet
+import gzip
+import ROOT
+
+bprintouts=False
+
+infile = '2016TopTaggingScaleFactors.root'
+
+inputFile = ROOT.TFile.Open(infile)
+
+listOfHistos = []
+for i in inputFile.GetListOfKeys(): 
+    listOfHistos.append(i.GetName())
+    print(i)
+
+
+
+dataInfo = OrderedDict()
+dataInfo['Object'] = ["mergedTop", "semimerged","notmerged"]
+dataInfo['workingPoint'] = []
+dataInfo['year'] = []
+dataInfo['valueType'] = []
+dataInfo['ptMin'] = []
+dataInfo['ptMax'] = []
+dataInfo['etaMin'] = []
+dataInfo['etaMax'] = []
+dataInfo['scaleFactor'] = []
+dataInfo['scaleFactorSystUncty_up'] = []
+dataInfo['scaleFactorSystUncty_down'] = []
+
+
+def create_corr(mode="mergedTop"):
+# tmpHistos ={}
+# for ih in listOfHistos:
+#     histname = "sf_"+mode+"_nominal"
+#     tmpHistos[ih] = inputFile.Get(ih+"/"+histname)
+#     valueType = 'efficiency' if ih.startswith('h2_eff') else 'misstag'
+#     tmpHistos[ih+'_Systuncty'] = inputFile.Get(ih+'_Systuncty')
+#     year = ih.split('sf')[1].split('_')[0]
+#     wp = ih.split('_')[-1]
+#     for ix in range( tmpHistos[ih].GetNbinsX()+2 ):      #### plus 2 for overflows
+#         for iy in range( tmpHistos[ih].GetNbinsY()+2 ):
+#             dataInfo['valueType'].append(valueType)
+#             dataInfo['workingPoint'].append(wp)
+#             dataInfo['year'].append(year)
+#             dataInfo['ptMin'].append(tmpHistos[ih].GetXaxis().GetBinLowEdge(ix) )
+#             dataInfo['ptMax'].append(tmpHistos[ih].GetXaxis().GetBinUpEdge(ix) )
+#             dataInfo['etaMin'].append(tmpHistos[ih].GetYaxis().GetBinLowEdge(iy) )
+#             dataInfo['etaMax'].append(tmpHistos[ih].GetYaxis().GetBinUpEdge(iy) )
+#             dataInfo['scaleFactor'].append(tmpHistos[ih].GetBinContent(ix,iy) )
+#             dataInfo['scaleFactorSystUncty'].append(tmpHistos[ih+'_Systuncty'].GetBinContent(ix,iy) )
+ 
+# df = pd.DataFrame( dataInfo )

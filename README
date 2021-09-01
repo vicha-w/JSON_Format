@@ -1,0 +1,27 @@
+This is a repo to produce the JSON format for CMS based on:
+
+https://gitlab.cern.ch/cms-nanoAOD/jsonpog-integration
+https://github.com/cms-nanoAOD/correctionlib
+
+Once you log into a CERN/DESY machine use
+
+     source /cvmfs/sft.cern.ch/lcg/views/LCG_100/x86_64-centos7-gcc10-opt/setup.sh
+
+to get the correct root version
+start a virtual enviorment
+python -m venv json
+source json/bin/activate
+
+and install the json format scheme
+
+python3 -m pip install correctionlib
+
+do not forget to add the directorys to the libary to find all the inputs
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:PATH_TO_DIR
+
+Each JMAR deliverable has its own directory. In the directory you can run python3 CORRECTION_YOU_WANT_TO_DO.py to create a json.
+
+Currently available are: 
+DeepAK8: no systematic uncertainties included, eta range set to -2.4 and 2.4, one file for W/top
+Toptagging: no systematic uncertainties included, eta range set to -2.4 and 2.4, one file per year, one per mode [merged, semimerged, notmerged]

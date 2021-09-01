@@ -1,0 +1,699 @@
+{
+    "schema_version": 1,
+    "corrections": [
+        {
+            "name": "DeepAK8",
+            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated)",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "year",
+                    "type": "string",
+                    "description": "Data taking dataset"
+                },
+                {
+                    "name": "workingPoint",
+                    "type": "string",
+                    "description": "WP: Mistaggin rate of "
+                },
+                {
+                    "name": "valueType",
+                    "type": "string",
+                    "description": "Efficiency or misstag"
+                },
+                {
+                    "name": "eta",
+                    "type": "real"
+                },
+                {
+                    "name": "pt",
+                    "type": "real"
+                },
+                {
+                    "name": "scaleFactor",
+                    "type": "real",
+                    "description": "Scale Factor"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "keys": [
+                    "2018",
+                    "2017",
+                    "2016"
+                ],
+                "content": [
+                    {
+                        "nodetype": "category",
+                        "keys": [
+                            "Nominal",
+                            "MassDecorr"
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.87,
+                                                    0.86,
+                                                    0.85
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.97,
+                                                    0.9,
+                                                    0.91
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.1,
+                                                    0.96,
+                                                    1.04
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.04,
+                                                    1.03,
+                                                    1.07
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.73,
+                                                    0.67,
+                                                    0.75
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.86,
+                                                    0.77,
+                                                    0.78
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.91,
+                                                    0.86,
+                                                    0.9
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.96,
+                                                    0.93,
+                                                    0.96
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodetype": "category",
+                        "keys": [
+                            "Nominal",
+                            "MassDecorr"
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.0,
+                                                    0.78,
+                                                    0.82
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.03,
+                                                    0.91,
+                                                    0.88
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.19,
+                                                    1.03,
+                                                    0.95
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.05,
+                                                    1.04,
+                                                    1.09
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.9,
+                                                    0.78,
+                                                    0.79
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.85,
+                                                    0.82,
+                                                    0.85
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.94,
+                                                    0.92,
+                                                    0.93
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.0,
+                                                    0.94,
+                                                    0.95
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nodetype": "category",
+                        "keys": [
+                            "Nominal",
+                            "MassDecorr"
+                        ],
+                        "content": [
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.04,
+                                                    0.93,
+                                                    0.68
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.13,
+                                                    0.9,
+                                                    0.73
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.18,
+                                                    0.99,
+                                                    0.95
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.05,
+                                                    1.07,
+                                                    1.09
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "nodetype": "category",
+                                "keys": [
+                                    "0p5",
+                                    "1p0",
+                                    "2p5",
+                                    "5p0"
+                                ],
+                                "content": [
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.82,
+                                                    0.9,
+                                                    0.82
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.91,
+                                                    0.94,
+                                                    0.89
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    0.95,
+                                                    0.99,
+                                                    0.93
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "nodetype": "binning",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "edges": [
+                                                    200.0,
+                                                    300.0,
+                                                    400.0,
+                                                    800.0
+                                                ],
+                                                "content": [
+                                                    1.05,
+                                                    1.01,
+                                                    0.94
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

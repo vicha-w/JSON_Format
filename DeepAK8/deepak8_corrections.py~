@@ -1,0 +1,87 @@
+import pandas as pd
+import numpy as np
+from collections import OrderedDict
+from correctionlib.schemav1 import Correction, Binning, Category, Formula
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import helperfunctions as hf
+from correctionlib.schemav1 import CorrectionSet
+import gzip
+
+bprintouts=False
+
+infile = 'DeepAK8V2_Top_W_SFs.csv'
+print("Read in "+infile)
+
+data = pd.read_csv(infile, names=['Object','Year','version','MistaggingRate','pT_low','pT_high','SF','SF_lowerErr','SF_upperErr'],skipinitialspace=True)
+
+data = data.iloc[1: , :]
+if bprintouts: 
+    print("Head of the CSV file that is read in")
+    print(data.head())
+
+
+
+dataInfo = OrderedDict()
+dataInfo['Object'] = data.Object.values.tolist()
+dataInfo['workingPoint'] = data.MistaggingRate.values.tolist()
+dataInfo['year'] = data.Year.values.tolist()
+dataInfo['valueType'] = data.version.values.tolist()
+dataInfo['ptMin'] = data.pT_low.values.tolist()
+dataInfo['ptMax'] = data.pT_high.values.tolist()
+dataInfo['etaMin'] = ["-2.4" for el in data.pT_high.values.tolist()]
+dataInfo['etaMax'] = ["2.4" for el in data.pT_high.values.tolist()]
+dataInfo['scaleFactor'] = data.SF.values.tolist()
+dataInfo['scaleFactorSystUncty_up'] = data.SF_lowerErr.values.tolist()
+dataInfo['scaleFactorSystUncty_down'] = data.SF_upperErr.values.tolist()
+
+
+df = pd.DataFrame( dataInfo )
+df['ptMin'] = df['ptMin'].astype(int)
+df['ptMax'] = df['ptMax'].astype(int)
+
+if bprintouts: 
+    print("Printing the data structure")
+    print(df)
+
+
+#csv file has two particle W and top
+def create_corr(particle="Top"):
+    df_part = df[df["Object"]==particle]
+        
+    print("Create data struction in json format")
+    corr_deepak8_part = Correction.parse_obj(
+        {
+            "version": 1,
+            "name": "DeepAK8",
+            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated)",
+            "inputs": [
+                {"name": "year", "type": "string", 'description': 'Data taking dataset'},
+                {"name": "workingPoint", "type": "string", 'description': 'WP: Mistaggin rate of '},
+                {"name": "valueType", "type": "string", "description": "Efficiency or misstag"},
+                {"name": "eta", "type": "real"},
+                {"name": "pt", "type": "real"},
+                {"name": "scaleFactor", "type": "real", "description": "Scale Factor"},
+            ],
+            "output": {"name": "weight", "type": "real"},
+            "data": hf.build_year(df_part),
+        }
+    )
+    
+    print(corr_deepak8_part)
+    cset = CorrectionSet.parse_obj({
+        "schema_version": 1,
+        "corrections": [
+            corr_deepak8_part    ]
+    })
+    cset.json()
+    with open('Corr_DeepAK8_'+particle+'.json', "w") as fout:
+        fout.write(cset.json(exclude_unset=True, indent=4))
+    
+    
+
+create_corr("Top")
+create_corr("W")
+
+
+
