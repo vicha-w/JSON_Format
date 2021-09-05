@@ -1,0 +1,269 @@
+{
+    "schema_version": 2,
+    "corrections": [
+        {
+            "name": "Gluon_Pythia",
+            "description": "Scale factor for gluons in pythia",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real"
+                },
+                {
+                    "name": "pt",
+                    "type": "real"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string"
+                },
+                {
+                    "name": "discriminant",
+                    "type": "real"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                0.0,
+                                30.0,
+                                1000.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        0.0,
+                                        30.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        30.0,
+                                        1000.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                0.0,
+                                30.0,
+                                1000.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        0.0,
+                                        30.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)*(1+2*(abs((2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770) - 1)))",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        30.0,
+                                        1000.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)*(1+abs((2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770) - 1))",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                0.0,
+                                30.0,
+                                1000.0
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        0.0,
+                                        30.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)*(1-2*(abs((2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770) - 1)))",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        30.0,
+                                        1000.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "binning",
+                                            "input": "discriminant",
+                                            "edges": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "content": [
+                                                {
+                                                    "nodetype": "formula",
+                                                    "expression": "(2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770)*(1-abs((2.5626*x^3 - 3.2240*x^2 + 1.8687*x + 0.6770) - 1))",
+                                                    "parser": "TFormula",
+                                                    "variables": [
+                                                        "discriminant"
+                                                    ],
+                                                    "parameters": []
+                                                }
+                                            ],
+                                            "flow": "clamp"
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
