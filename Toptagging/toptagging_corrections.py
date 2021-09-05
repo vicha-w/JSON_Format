@@ -29,15 +29,12 @@ def create_corr(year_="2016"):
         modes = ['mergedTop', 'semimerged', 'notmerged']
     
         listOfHistos = []
-        print("List of Workingpoints that are considered")
+        if bprintouts: print("List of Workingpoints that are considered")
         for i in inputFile.GetListOfKeys(): 
             listOfHistos.append(i.GetName())
             if bprintouts: print(i)
         
         
-        
-        
-
         for mode in modes:
     
             dataInfo = OrderedDict()
@@ -53,7 +50,7 @@ def create_corr(year_="2016"):
             tmpHistos_up ={}
             tmpHistos_down ={}
             for ih in listOfHistos:
-    #            if "HOTVR" in ih: continue
+
                 histname = "sf_"+mode+"_nominal"
                 tmpHistos[ih] = inputFile.Get(ih+"/"+histname)
                 tmpHistos_up[ih] = inputFile.Get(ih+"/"+histname.replace("nominal","up"))
@@ -134,7 +131,6 @@ print("sf is:"+str(valsf))
 
 valsf= evaluator["Top_tagging_PUPPI_mergedTop"].evaluate(2.0,450.,"up","wp1")
 print("sf up is:"+str(valsf))
-
 
 valsf= evaluator["Top_tagging_PUPPI_mergedTop"].evaluate(2.0,450.,"down","wp1")
 print("sf down is:"+str(valsf))
