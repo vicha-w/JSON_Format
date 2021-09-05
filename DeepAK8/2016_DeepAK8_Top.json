@@ -1,26 +1,11 @@
 {
-    "schema_version": 1,
+    "schema_version": 2,
     "corrections": [
         {
-            "name": "DeepAK8",
-            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated)",
+            "name": "DeepAK8_Top_Nominal",
+            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle Top",
             "version": 1,
             "inputs": [
-                {
-                    "name": "year",
-                    "type": "string",
-                    "description": "Data taking dataset"
-                },
-                {
-                    "name": "workingPoint",
-                    "type": "string",
-                    "description": "WP: Mistaggin rate of "
-                },
-                {
-                    "name": "valueType",
-                    "type": "string",
-                    "description": "Efficiency or misstag"
-                },
                 {
                     "name": "eta",
                     "type": "real"
@@ -30,9 +15,12 @@
                     "type": "real"
                 },
                 {
-                    "name": "scaleFactor",
-                    "type": "real",
-                    "description": "Scale Factor"
+                    "name": "systematic",
+                    "type": "string"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string"
                 }
             ],
             "output": {
@@ -41,30 +29,19 @@
             },
             "data": {
                 "nodetype": "category",
-                "keys": [
-                    "2018",
-                    "2017",
-                    "2016"
-                ],
+                "input": "systematic",
                 "content": [
                     {
-                        "nodetype": "category",
-                        "keys": [
-                            "Nominal",
-                            "MassDecorr"
-                        ],
-                        "content": [
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -72,468 +49,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.89,
-                                                    1.0,
-                                                    0.97,
-                                                    0.92
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.89,
-                                                    1.06,
-                                                    1.0,
-                                                    0.99
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.97,
-                                                    1.06,
-                                                    0.99,
-                                                    1.0
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.05,
-                                                    1.03,
-                                                    1.0,
-                                                    1.02
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.81,
-                                                    0.93,
-                                                    0.96,
-                                                    0.93
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.9,
-                                                    0.97,
-                                                    0.98,
-                                                    0.95
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.96,
-                                                    1.0,
-                                                    0.98,
-                                                    0.99
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.97,
-                                                    1.0,
-                                                    0.98,
-                                                    0.98
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodetype": "category",
-                        "keys": [
-                            "Nominal",
-                            "MassDecorr"
-                        ],
-                        "content": [
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.0,
-                                                    0.89,
-                                                    0.93,
-                                                    0.98
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.97,
-                                                    0.97,
-                                                    0.95,
-                                                    1.03
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.02,
-                                                    1.02,
-                                                    0.97,
-                                                    1.01
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.01,
-                                                    1.03,
-                                                    1.02,
-                                                    1.03
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.88,
-                                                    0.9,
-                                                    0.95,
-                                                    0.97
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.95,
-                                                    1.0,
-                                                    0.98,
-                                                    0.98
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.95,
-                                                    0.98,
-                                                    0.97,
-                                                    0.97
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.02,
-                                                    1.0,
-                                                    1.01,
-                                                    0.99
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "nodetype": "category",
-                        "keys": [
-                            "Nominal",
-                            "MassDecorr"
-                        ],
-                        "content": [
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
-                                        "nodetype": "binning",
-                                        "edges": [
-                                            -2.4,
-                                            2.4
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -546,12 +62,18 @@
                                                     0.96,
                                                     0.89,
                                                     0.88
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -559,6 +81,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -571,12 +94,18 @@
                                                     0.88,
                                                     0.94,
                                                     1.01
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -584,6 +113,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -596,12 +126,18 @@
                                                     0.9,
                                                     0.97,
                                                     1.03
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -609,6 +145,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -621,23 +158,27 @@
                                                     0.97,
                                                     0.99,
                                                     1.02
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
+                                        ],
+                                        "flow": "error"
                                     }
-                                ]
-                            },
-                            {
-                                "nodetype": "category",
-                                "keys": [
-                                    "0p1",
-                                    "0p5",
-                                    "1p0",
-                                    "2p5"
-                                ],
-                                "content": [
-                                    {
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -645,6 +186,314 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.0767,
+                                                    1.0176,
+                                                    0.9256000000000001,
+                                                    0.9328000000000001
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.1110000000000002,
+                                                    0.924,
+                                                    0.9776,
+                                                    1.0706
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.0976000000000001,
+                                                    0.936,
+                                                    1.0088,
+                                                    1.0918
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.1660000000000001,
+                                                    1.0088,
+                                                    1.0197,
+                                                    1.0812000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.8536,
+                                                    0.9023999999999999,
+                                                    0.8543999999999999,
+                                                    0.8183999999999999
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.8888,
+                                                    0.836,
+                                                    0.9023999999999999,
+                                                    0.9493999999999999
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.8623999999999999,
+                                                    0.864,
+                                                    0.9311999999999999,
+                                                    0.9579
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.034,
+                                                    0.9311999999999999,
+                                                    0.9503999999999999,
+                                                    0.9996
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "DeepAK8_Top_MassDecorr",
+            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle Top",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real"
+                },
+                {
+                    "name": "pt",
+                    "type": "real"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -657,12 +506,18 @@
                                                     1.01,
                                                     0.84,
                                                     1.0
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -670,6 +525,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -682,12 +538,18 @@
                                                     1.02,
                                                     0.93,
                                                     1.0
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -695,6 +557,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -707,12 +570,18 @@
                                                     0.95,
                                                     0.97,
                                                     1.0
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
-                                    },
-                                    {
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
                                         "nodetype": "binning",
+                                        "input": "eta",
                                         "edges": [
                                             -2.4,
                                             2.4
@@ -720,6 +589,7 @@
                                         "content": [
                                             {
                                                 "nodetype": "binning",
+                                                "input": "pt",
                                                 "edges": [
                                                     300.0,
                                                     400.0,
@@ -732,13 +602,289 @@
                                                     0.94,
                                                     1.02,
                                                     1.02
-                                                ]
+                                                ],
+                                                "flow": "clamp"
                                             }
-                                        ]
+                                        ],
+                                        "flow": "error"
                                     }
-                                ]
-                            }
-                        ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.0212,
+                                                    1.1817,
+                                                    0.8904,
+                                                    1.06
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.9612,
+                                                    1.0710000000000002,
+                                                    0.9672000000000001,
+                                                    1.05
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.0486,
+                                                    0.988,
+                                                    0.9991,
+                                                    1.04
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    1.0282,
+                                                    0.9682,
+                                                    1.0506,
+                                                    1.0506
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "0p1",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.8096,
+                                                    0.8382999999999999,
+                                                    0.7896,
+                                                    0.9299999999999999
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "0p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.8188000000000001,
+                                                    0.969,
+                                                    0.8928,
+                                                    0.95
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "1p0",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.9113999999999999,
+                                                    0.9119999999999999,
+                                                    0.9409,
+                                                    0.96
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "2p5",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1200.0
+                                                ],
+                                                "content": [
+                                                    0.9215,
+                                                    0.9117999999999999,
+                                                    0.9894,
+                                                    0.9792
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             }

@@ -1,100 +1,140 @@
 import pandas as pd
 import numpy as np
 from collections import OrderedDict
-from correctionlib.schemav1 import Correction, Binning, Category, Formula
+from correctionlib.schemav2 import Correction, Binning, Category, Formula, CorrectionSet
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import helperfunctions as hf
-from correctionlib.schemav1 import CorrectionSet
+import helperfunctionsv2 as hf
 import gzip
 import ROOT
 
-bprintouts=True
+bprintouts=False
 
-infile = '2016TopTaggingScaleFactors.root'
-
-inputFile = ROOT.TFile.Open(infile)
-
-listOfHistos = []
-for i in inputFile.GetListOfKeys(): 
-    listOfHistos.append(i.GetName())
-    print(i)
+# this script depends on the 'infile' name. The root file should be inside this folder and is calles 'YEAR_TopTaggingScaleFactors.root'
+# it runs over three modes 'mergedTop', 'semimerged', 'notmerged'
 
 
+def create_corr(year_="2016"):
+    correction_dict ={}
+    for i in range(2):
+        postfix = ""
+        if i==1:
+            postfix = "_NoMassCut"
 
-dataInfo = OrderedDict()
-dataInfo['Object'] = []
-dataInfo['workingPoint'] = []
-dataInfo['ptMin'] = []
-dataInfo['ptMax'] = []
-dataInfo['scaleFactor'] = []
-#dataInfo['scaleFactorSystUncty_up'] = []
-#dataInfo['scaleFactorSystUncty_down'] = []
-
-
-def create_corr(mode="mergedTop",year_="2016"):
-    tmpHistos ={}
-    for ih in listOfHistos:
-        if "HOTVR" in ih: continue
-        histname = "sf_"+mode+"_nominal"
-        tmpHistos[ih] = inputFile.Get(ih+"/"+histname)
-
-        # tmpHistos[ih+'_Systuncty'] = inputFile.Get(ih+'_Systuncty')
-        wp =[ x for x in ih.split('_') if x.startswith("wp")]
-        wp = wp[0] if len(wp) else "wp1"
-        if "btag" in ih: wp+="_btag"
-        for ix in range( tmpHistos[ih].GetNbinsX()+2 ):      #### plus 2 for overflows
-            dataInfo['workingPoint'].append(wp)
-            dataInfo['ptMin'].append(tmpHistos[ih].GetXaxis().GetBinLowEdge(ix) )
-            dataInfo['ptMax'].append(tmpHistos[ih].GetXaxis().GetBinUpEdge(ix) )
-            dataInfo['scaleFactor'].append(tmpHistos[ih].GetBinContent(ix) )
-            dataInfo['Object'].append(ih )
-            #dataInfo['scaleFactorSystUncty'].append(tmpHistos[ih+'_Systuncty'].GetBinContent(ix,iy) )
-
-
-    dataInfo['valueType'] = ["effciency" for el in dataInfo["scaleFactor"]]
-    dataInfo['year'] = [ year_ for el in dataInfo["scaleFactor"]]
-    dataInfo['etaMin'] = ["-2.4" for el in dataInfo["scaleFactor"]]
-    dataInfo['etaMax'] = ["2.4" for el in dataInfo["scaleFactor"]]
-     
+        infile = year_+'TopTaggingScaleFactors'+postfix+'.root'
         
-    df = pd.DataFrame( dataInfo )
-    df['ptMin'] = df['ptMin'].astype(int)
-    df['ptMax'] = df['ptMax'].astype(int)
+        print("working on " + infile)
+        inputFile = ROOT.TFile.Open(infile)
+        
+        modes = ['mergedTop', 'semimerged', 'notmerged']
+    
+        listOfHistos = []
+        print("List of Workingpoints that are considered")
+        for i in inputFile.GetListOfKeys(): 
+            listOfHistos.append(i.GetName())
+            if bprintouts: print(i)
+        
+        
+        
+        
+
+        for mode in modes:
+    
+            dataInfo = OrderedDict()
+            dataInfo['Object'] = []
+            dataInfo['workingPoint'] = []
+            dataInfo['ptMin'] = []
+            dataInfo['ptMax'] = []
+            dataInfo['scaleFactor'] = []
+            dataInfo['scaleFactorSystUncty_up'] = []
+            dataInfo['scaleFactorSystUncty_down'] = []
+    
+            tmpHistos ={}
+            tmpHistos_up ={}
+            tmpHistos_down ={}
+            for ih in listOfHistos:
+    #            if "HOTVR" in ih: continue
+                histname = "sf_"+mode+"_nominal"
+                tmpHistos[ih] = inputFile.Get(ih+"/"+histname)
+                tmpHistos_up[ih] = inputFile.Get(ih+"/"+histname.replace("nominal","up"))
+                tmpHistos_down[ih] = inputFile.Get(ih+"/"+histname.replace("nominal","down"))
+        
+                wp=""
+                if "HOTVR" in ih: wp = "HOTVR"
+                else:
+                    wp =[ x for x in ih.split('_') if x.startswith("wp")]
+                    wp = wp[0] if len(wp) else "wp1"
+                if "btag" in ih: wp+="_btag"
+                for ix in range( tmpHistos[ih].GetNbinsX()+2 ):      #### plus 2 for overflows
+                    dataInfo['workingPoint'].append(wp)
+                    dataInfo['ptMin'].append(tmpHistos[ih].GetXaxis().GetBinLowEdge(ix) )
+                    dataInfo['ptMax'].append(tmpHistos[ih].GetXaxis().GetBinUpEdge(ix) )
+                    dataInfo['scaleFactor'].append(tmpHistos[ih].GetBinContent(ix) )
+                    dataInfo['Object'].append(ih )
+                    dataInfo['scaleFactorSystUncty_up'].append(tmpHistos_up[ih].GetBinContent(ix) )
+                    dataInfo['scaleFactorSystUncty_down'].append(tmpHistos_down[ih].GetBinContent(ix) )
+        
+        
+            dataInfo['year'] = [ year_ for el in dataInfo["scaleFactor"]]
+            dataInfo['etaMin'] = ["-2.4" for el in dataInfo["scaleFactor"]]
+            dataInfo['etaMax'] = ["2.4" for el in dataInfo["scaleFactor"]]
+             
+                
+            df = pd.DataFrame( dataInfo )
+            df['ptMin'] = df['ptMin'].astype(int)
+            df['ptMax'] = df['ptMax'].astype(int)
+            
+        
+            if bprintouts: 
+                print("Printing the data structure")
+                print(df)
+        
+            print("Create data struction in json format")
+            corr_toptagging = Correction.parse_obj(
+                {
+                    "version": 1,
+                    "name": "Top_tagging_PUPPI_"+mode+postfix,
+                    "description": "Scale factor for Top tagging algorithm",
+                    "inputs": [
+                        {"name": "eta", "type": "real"},
+                        {"name": "pt", "type": "real"},
+                        {"name": "systematic", "type": "string"},
+                        {"name": "workingpoint", "type": "string", 'description': 'WP: Mistaggin rate of '}
+                    ],
+                    "output": {"name": "weight", "type": "real"},
+                    "data": hf.build_systs(df, False),
+                }
+            )
+            
+            if bprintouts: print(corr_toptagging)
+            correction_dict[mode+postfix] = corr_toptagging
     
 
-    if bprintouts: 
-        print("Printing the data structure")
-        print(df)
-
-    print("Create data struction in json format")
-    corr_toptagging = Correction.parse_obj(
-        {
-            "version": 1,
-            "name": "Top tagging "+mode + " "+ year_,
-            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated)",
-            "inputs": [
-                {"name": "year", "type": "string", 'description': 'Data taking dataset'},
-                {"name": "workingPoint", "type": "string", 'description': 'WP: Mistaggin rate of '},
-                {"name": "valueType", "type": "string", "description": "Efficiency or misstag"},
-                {"name": "eta", "type": "real"},
-                {"name": "pt", "type": "real"},
-                {"name": "scaleFactor", "type": "real", "description": "Scale Factor"},
-            ],
-            "output": {"name": "weight", "type": "real"},
-            "data": hf.build_year(df),
-        }
-    )
-    
-    print(corr_toptagging)
     cset = CorrectionSet.parse_obj({
-        "schema_version": 1,
+        "schema_version": 2,
         "corrections": [
-            corr_toptagging    ]
+            correction_dict[key] for key in correction_dict    ]
     })
     cset.json()
-    with open('Corr_Toptagging_'+mode+"_"+year_+'.json', "w") as fout:
+    with open(year_+'_Toptagging.json', "w") as fout:
         fout.write(cset.json(exclude_unset=True, indent=4))
 
 
-create_corr()
+create_corr("2016")
+create_corr("2017")
+create_corr("2018")
+
+from correctionlib import _core
+
+#Download the correct JSON files 
+evaluator = _core.CorrectionSet.from_file('2016_Toptagging.json')
+
+valsf= evaluator["Top_tagging_PUPPI_mergedTop"].evaluate(2.0,450.,"nom","wp1")
+print("sf is:"+str(valsf))
+
+valsf= evaluator["Top_tagging_PUPPI_mergedTop"].evaluate(2.0,450.,"up","wp1")
+print("sf up is:"+str(valsf))
+
+
+valsf= evaluator["Top_tagging_PUPPI_mergedTop"].evaluate(2.0,450.,"down","wp1")
+print("sf down is:"+str(valsf))
