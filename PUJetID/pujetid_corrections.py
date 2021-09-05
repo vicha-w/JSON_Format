@@ -8,7 +8,7 @@ import helperfunctionsv2 as hf
 import gzip
 import ROOT
 
-bprintouts=True
+bprintouts=False
 
 infile = "PUID_80XTraining_EffSFandUncties.root"
 
@@ -86,7 +86,7 @@ def create_corr(year= "2016"):
             {
                 "version": 1,
                 "name": "PUJetID_"+miseff,
-                "description": "Scale factor for Top tagging algorithm",
+                "description": "Scale factor for PUJetID algorithm",
                 "inputs": [
                     {"name": "eta", "type": "real"},
                     {"name": "pt", "type": "real"},

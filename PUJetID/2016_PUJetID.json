@@ -3,7 +3,7 @@
     "corrections": [
         {
             "name": "PUJetID_eff",
-            "description": "Scale factor for Top tagging algorithm",
+            "description": "Scale factor for PUJetID algorithm",
             "version": 1,
             "inputs": [
                 {
@@ -3331,7 +3331,7 @@
         },
         {
             "name": "PUJetID_mis",
-            "description": "Scale factor for Top tagging algorithm",
+            "description": "Scale factor for PUJetID algorithm",
             "version": 1,
             "inputs": [
                 {
