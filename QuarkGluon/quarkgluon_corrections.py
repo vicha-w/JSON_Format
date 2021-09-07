@@ -38,10 +38,10 @@ def create_corr(year_="2016"):
             "name": "Gluon_Pythia",
             "description": "Scale factor for gluons in pythia",
             "inputs": [
-                {"name": "eta", "type": "real"},
-                {"name": "pt", "type": "real"},
-                {"name": "systematic", "type": "string"},
-                {"name": "discriminant", "type": "real"}
+                {"name": "eta", "type": "real", "description": "eta of the jet"},
+                {"name": "pt", "type": "real", "description": "pT of the jet"},
+                {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
+                {"name": "discriminant", "type": "real", "description": "The discriminated value"}
             ],
             "output": {"name": "weight", "type": "real"},
             "data": hf.build_systs_formular(df),

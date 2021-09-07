@@ -88,10 +88,10 @@ def create_corr(year= "2016"):
                 "name": "PUJetID_"+miseff,
                 "description": "Scale factor for PUJetID algorithm",
                 "inputs": [
-                    {"name": "eta", "type": "real"},
-                    {"name": "pt", "type": "real"},
-                    {"name": "systematic", "type": "string"},
-                    {"name": "workingpoint", "type": "string", 'description': 'WP: Mistaggin rate of '}
+                {"name": "eta", "type": "real", "description": "eta of the jet"},
+                {"name": "pt", "type": "real", "description": "pT of the jet"},
+                {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
+                {"name": "workingpoint", "type": "string", "description": "Working point of the tagger you use"}
                 ],
                 "output": {"name": "weight", "type": "real"},
                 "data": hf.build_systs(df, True),

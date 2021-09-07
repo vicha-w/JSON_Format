@@ -8,19 +8,23 @@
             "inputs": [
                 {
                     "name": "eta",
-                    "type": "real"
+                    "type": "real",
+                    "description": "eta of the jet"
                 },
                 {
                     "name": "pt",
-                    "type": "real"
+                    "type": "real",
+                    "description": "pT of the jet"
                 },
                 {
                     "name": "systematic",
-                    "type": "string"
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
                 },
                 {
                     "name": "discriminant",
-                    "type": "real"
+                    "type": "real",
+                    "description": "The discriminated value"
                 }
             ],
             "output": {

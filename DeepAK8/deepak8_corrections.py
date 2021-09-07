@@ -68,10 +68,10 @@ def create_corr(particle="Top",year_="2016"):
             "name": "DeepAK8_"+particle+"_"+valuetype,
             "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle "+particle,
             "inputs": [
-                {"name": "eta", "type": "real"},
-                {"name": "pt", "type": "real"},
-                {"name": "systematic", "type": "string"},
-                {"name": "workingpoint", "type": "string"}
+                {"name": "eta", "type": "real", "description": "eta of the jet"},
+                {"name": "pt", "type": "real", "description": "pT of the jet"},
+                {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
+                {"name": "workingpoint", "type": "string", "description": "Working point of the tagger you use (misidentification rate)"}
             ],
             "output": {"name": "weight", "type": "real"},
             "data": hf.build_systs(df_part),

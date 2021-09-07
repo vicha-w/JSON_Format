@@ -22,6 +22,15 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:PATH_TO_DIR
 
 Each JMAR deliverable has its own directory. In the directory you can run python3 CORRECTION_YOU_WANT_TO_DO.py to create a json.
 
-Currently available are: 
-DeepAK8: no systematic uncertainties included, eta range set to -2.4 and 2.4, one file for W/top
-Toptagging: no systematic uncertainties included, eta range set to -2.4 and 2.4, one file per year, one per mode [merged, semimerged, notmerged]
+If you want to print your json you can do:
+
+correction summary YOUR.json
+
+and it will print a overview of what is stored in your file.
+After all json are collected we can merge them by 
+
+correction merge YEAR_JSON1.json YEAR_JSON2.json > YEAR_jmar.json
+
+afterwards you can look at the summary or also create an html from it
+
+correction --html 2016_jmar.html summary 2016_jmar.json
