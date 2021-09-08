@@ -73,8 +73,13 @@ def create_corr(year_="2016"):
         
         
             dataInfo['year'] = [ year_ for el in dataInfo["scaleFactor"]]
-            dataInfo['etaMin'] = ["-2.4" for el in dataInfo["scaleFactor"]]
-            dataInfo['etaMax'] = ["2.4" for el in dataInfo["scaleFactor"]]
+            if "16" in year_:
+                dataInfo['etaMin'] = ["-2.4" for el in dataInfo["scaleFactor"]]
+                dataInfo['etaMax'] = ["2.4" for el in dataInfo["scaleFactor"]]
+            else:
+                dataInfo['etaMin'] = ["-2.5" for el in dataInfo["scaleFactor"]]
+                dataInfo['etaMax'] = ["2.5" for el in dataInfo["scaleFactor"]]
+                
              
                 
             df = pd.DataFrame( dataInfo )

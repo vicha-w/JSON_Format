@@ -63,7 +63,10 @@ def create_corr(year= "2016"):
                     dataInfo['etaMin'].append(tmpHistos[ih].GetYaxis().GetBinLowEdge(iy) )
                     dataInfo['etaMax'].append(tmpHistos[ih].GetYaxis().GetBinUpEdge(iy) )
     
-                    dataInfo['scaleFactor'].append(tmpHistos[ih].GetBinContent(ix,iy) )
+                    if tmpHistos[ih].GetXaxis().GetBinLowEdge(ix) >= 50:
+                        dataInfo['scaleFactor'].append(1 )
+                    else:
+                        dataInfo['scaleFactor'].append(tmpHistos[ih].GetBinContent(ix,iy) )
                     dataInfo['Object'].append(ih )
                     dataInfo['scaleFactorSystUncty_up'].append(tmpHistos_up[ih].GetBinContent(ix,iy) )
                     dataInfo['scaleFactorSystUncty_down'].append(tmpHistos_down[ih].GetBinContent(ix,iy) )
@@ -86,7 +89,7 @@ def create_corr(year= "2016"):
             {
                 "version": 1,
                 "name": "PUJetID_"+miseff,
-                "description": "Scale factor for PUJetID algorithm",
+                "description": "Scale factor for PUJetID algorithm 80(80), 90(90) and 99(95)% efficiency for eta<2.5(>2.5) for quark jets",
                 "inputs": [
                 {"name": "eta", "type": "real", "description": "eta of the jet"},
                 {"name": "pt", "type": "real", "description": "pT of the jet"},
@@ -131,3 +134,8 @@ print("sf up is:"+str(valsf))
 valsf= evaluator["PUJetID_eff"].evaluate(-4.5,20.,"down","L")
 print("sf down is:"+str(valsf))
 
+valsf= evaluator["PUJetID_eff"].evaluate(-4.5,50.,"nom","L")
+print("sf is:"+str(valsf))
+
+valsf= evaluator["PUJetID_eff"].evaluate(-4.5,53.,"nom","L")
+print("sf is:"+str(valsf))

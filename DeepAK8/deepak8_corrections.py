@@ -36,20 +36,28 @@ dataInfo['scaleFactorSystUncty_down'] = data.SF_upperErr.values.tolist()
 
 
 
-df = pd.DataFrame( dataInfo )
-df['ptMin'] = df['ptMin'].astype(int)
-df['ptMax'] = df['ptMax'].astype(int)
-df['scaleFactor'] = df['scaleFactor'].astype(float)
-df['scaleFactorSystUncty_up'] = df['scaleFactorSystUncty_up'].astype(float)
-df['scaleFactorSystUncty_down'] = df['scaleFactorSystUncty_down'].astype(float)
-
-if bprintouts: 
-    print("Printing the data structure")
-    print(df)
 
 
 #csv file has two particle W and top
 def create_corr(particle="Top",year_="2016"):
+
+    if "17" in year_ or "18" in year_:
+        dataInfo['etaMin'] = ["-2.5" for el in data.pT_high.values.tolist()]
+        dataInfo['etaMax'] = ["2.5" for el in data.pT_high.values.tolist()]
+        
+
+    df = pd.DataFrame( dataInfo )
+    df['ptMin'] = df['ptMin'].astype(int)
+    df['ptMax'] = df['ptMax'].astype(int)
+    df['scaleFactor'] = df['scaleFactor'].astype(float)
+    df['scaleFactorSystUncty_up'] = df['scaleFactorSystUncty_up'].astype(float)
+    df['scaleFactorSystUncty_down'] = df['scaleFactorSystUncty_down'].astype(float)
+
+    if bprintouts: 
+        print("Printing the data structure")
+        print(df)
+
+
     keys = df["valueType"].unique()
     if bprintouts: print(keys)
 
@@ -71,7 +79,7 @@ def create_corr(particle="Top",year_="2016"):
                 {"name": "eta", "type": "real", "description": "eta of the jet"},
                 {"name": "pt", "type": "real", "description": "pT of the jet"},
                 {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
-                {"name": "workingpoint", "type": "string", "description": "Working point of the tagger you use (misidentification rate)"}
+                {"name": "workingpoint", "type": "string", "description": "Working point of the tagger you use (QCD misidentification rate)"}
             ],
             "output": {"name": "weight", "type": "real"},
             "data": hf.build_systs(df_part),

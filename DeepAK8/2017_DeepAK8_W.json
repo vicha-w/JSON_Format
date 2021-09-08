@@ -24,7 +24,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (misidentification rate)"
+                    "description": "Working point of the tagger you use (QCD misidentification rate)"
                 }
             ],
             "output": {
@@ -47,8 +47,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -77,8 +77,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -107,8 +107,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -137,8 +137,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -176,8 +176,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -206,8 +206,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -236,8 +236,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -266,8 +266,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -305,8 +305,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -335,8 +335,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -365,8 +365,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -395,8 +395,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -448,7 +448,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (misidentification rate)"
+                    "description": "Working point of the tagger you use (QCD misidentification rate)"
                 }
             ],
             "output": {
@@ -471,8 +471,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -501,8 +501,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -531,8 +531,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -561,8 +561,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -600,8 +600,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -630,8 +630,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -660,8 +660,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -690,8 +690,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -729,8 +729,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -759,8 +759,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -789,8 +789,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {
@@ -819,8 +819,8 @@
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.4,
-                                            2.4
+                                            -2.5,
+                                            2.5
                                         ],
                                         "content": [
                                             {

@@ -24,7 +24,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (misidentification rate)"
+                    "description": "Working point of the tagger you use (QCD misidentification rate)"
                 }
             ],
             "output": {
@@ -448,7 +448,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (misidentification rate)"
+                    "description": "Working point of the tagger you use (QCD misidentification rate)"
                 }
             ],
             "output": {
