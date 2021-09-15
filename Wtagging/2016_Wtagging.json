@@ -1,0 +1,2419 @@
+{
+    "schema_version": 2,
+    "corrections": [
+        {
+            "name": "Wtagging_2016HP35",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.99
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016HP40",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.06
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.06
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016HP43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.937
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.04
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.04
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016HP45CHS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.2200000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.2200000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016HP55",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.03
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.17
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.17
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016HP60CHS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP60CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.11
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP60CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1900000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016HP60CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1900000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMR",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.2
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.2
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMR43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.086
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1760000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMR43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1760000000000002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMRCHS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMRCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.23
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMRCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.41
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMRCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.41
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0094
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0094
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMS43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.014
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.021
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.021
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016JMSCHS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMSCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMSCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.023
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016JMSCHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.023
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016LP35",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.03
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.26
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP35",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.26
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016LP40",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.96
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.07
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP40",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.07
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016LP43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.006
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.015
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.015
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016LP45CHS",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.88
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.98
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP45CHS",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.98
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2016LP55",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.95
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.28
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2016LP55",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.28
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

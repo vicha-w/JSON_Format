@@ -17,8 +17,9 @@ body {
     <code>
         <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span class="r1">──────────────────────────────── </span><span class="r2">Corrections in file 2016_jmar.json</span><span class="r1"> ────────────────────────────────</span>
 <span class="r3">CorrectionSet</span> (<span class="r4">schema v2</span>)                                                                           
-Merged from DeepAK8/2016_DeepAK8_Top.json DeepAK8/2016_DeepAK8_W.json PUJetID/2016_PUJetID.json     
-QuarkGluon/2016_QuarkGluon.json Toptagging/2016_Toptagging.json                                     
+Merged from DeepAK8/2016_DeepAK8_Top.json DeepAK8/2016_DeepAK8_W.json                               
+Toptagging/2016_Toptagging.json QuarkGluon/2016_QuarkGluon.json Wtagging/2016_softdrop.json         
+Wtagging/2016_Wtagging.json PUJetID/2016_PUJetID.json                                               
 📂                                                                                                  
 <span class="r5">├── </span>📈 <span class="r3">DeepAK8_Top_Nominal</span> (v1)                                                                     
 <span class="r5">│   </span>Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle Top             
@@ -124,59 +125,6 @@ QuarkGluon/2016_QuarkGluon.json Toptagging/2016_Toptagging.json
 <span class="r5">│   </span>│ Working point of the tagger you use (QCD misidentification rate) │                            
 <span class="r5">│   </span>│ Values: 0p5, 1p0, 2p5, 5p0                                       │                            
 <span class="r5">│   </span>╰──────────────────────────────────────────────────────────────────╯                            
-<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
-<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
-<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
-<span class="r5">│   </span>╰────────────────╯                                                                              
-<span class="r5">├── </span>📈 <span class="r3">PUJetID_eff</span> (v1)                                                                             
-<span class="r5">│   </span>Scale factor for PUJetID algorithm 80(80), 90(90) and 99(95)% efficiency for eta&lt;2.5(&gt;2.5) for  
-<span class="r5">│   </span>quark jets                                                                                      
-<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 135                                                          
-<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
-<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                     │ │ <span class="r3">pt</span> (real)                           │      
-<span class="r5">│   </span>│ eta of the jet                                 │ │ pT of the jet                       │      
-<span class="r5">│   </span>│ Range: [-5.833333333333333, 5.833333333333334) │ │ Range: [8.0, 57.0), overflow ok     │      
-<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
-<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
-<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)                            │ │ <span class="r3">workingpoint</span> (string)               │      
-<span class="r5">│   </span>│ systematics: nom, up, down                     │ │ Working point of the tagger you use │      
-<span class="r5">│   </span>│ Values: down, nom, up                          │ │ Values: L, M, T                     │      
-<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
-<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
-<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
-<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
-<span class="r5">│   </span>╰────────────────╯                                                                              
-<span class="r5">├── </span>📈 <span class="r3">PUJetID_mis</span> (v1)                                                                             
-<span class="r5">│   </span>Scale factor for PUJetID algorithm 80(80), 90(90) and 99(95)% efficiency for eta&lt;2.5(&gt;2.5) for  
-<span class="r5">│   </span>quark jets                                                                                      
-<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 135                                                          
-<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
-<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                     │ │ <span class="r3">pt</span> (real)                           │      
-<span class="r5">│   </span>│ eta of the jet                                 │ │ pT of the jet                       │      
-<span class="r5">│   </span>│ Range: [-5.833333333333333, 5.833333333333334) │ │ Range: [8.0, 57.0), overflow ok     │      
-<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
-<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
-<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)                            │ │ <span class="r3">workingpoint</span> (string)               │      
-<span class="r5">│   </span>│ systematics: nom, up, down                     │ │ Working point of the tagger you use │      
-<span class="r5">│   </span>│ Values: down, nom, up                          │ │ Values: L, M, T                     │      
-<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
-<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
-<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
-<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
-<span class="r5">│   </span>╰────────────────╯                                                                              
-<span class="r5">├── </span>📈 <span class="r3">Gluon_Pythia</span> (v1)                                                                            
-<span class="r5">│   </span>Scale factor for gluons in pythia                                                               
-<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 1, <span class="r3">Binning</span>: 15, <span class="r3">Formula</span>: 6                                               
-<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭───────────── ▶ input ─────────────╮                            
-<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                         │                            
-<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                     │                            
-<span class="r5">│   </span>│ Range: [0.0, 1000.0)       │ │ Range: [0.0, 1000.0), overflow ok │                            
-<span class="r5">│   </span>╰────────────────────────────╯ ╰───────────────────────────────────╯                            
-<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭───────────── ▶ input ─────────────╮                            
-<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">discriminant</span> (real)               │                            
-<span class="r5">│   </span>│ systematics: nom, up, down │ │ The discriminated value           │                            
-<span class="r5">│   </span>│ Values: down, nom, up      │ │ Range: [-inf, inf), overflow ok   │                            
-<span class="r5">│   </span>╰────────────────────────────╯ ╰───────────────────────────────────╯                            
 <span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
 <span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
 <span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
@@ -316,29 +264,383 @@ QuarkGluon/2016_QuarkGluon.json Toptagging/2016_Toptagging.json
 <span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
 <span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
 <span class="r5">│   </span>╰────────────────╯                                                                              
-<span class="r5">└── </span>📈 <span class="r3">Top_tagging_PUPPI_notmerged_NoMassCut</span> (v1)                                                   
-<span class="r5">    </span>Scale factor for Top tagging algorithm                                                          
-<span class="r5">    </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 66                                                           
-<span class="r5">    </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
-<span class="r5">    </span>│ <span class="r3">eta</span> (real)                                                                               │    
-<span class="r5">    </span>│ eta of the jet                                                                           │    
-<span class="r5">    </span>│ Range: [-2.4, 2.4)                                                                       │    
-<span class="r5">    </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
-<span class="r5">    </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
-<span class="r5">    </span>│ <span class="r3">pt</span> (real)                                                                                │    
-<span class="r5">    </span>│ pT of the jet                                                                            │    
-<span class="r5">    </span>│ Range: [-640.0, 5940.0), overflow ok                                                     │    
-<span class="r5">    </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
-<span class="r5">    </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
-<span class="r5">    </span>│ <span class="r3">systematic</span> (string)                                                                      │    
-<span class="r5">    </span>│ systematics: nom, up, down                                                               │    
-<span class="r5">    </span>│ Values: down, nom, up                                                                    │    
-<span class="r5">    </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
-<span class="r5">    </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
-<span class="r5">    </span>│ <span class="r3">workingpoint</span> (string)                                                                    │    
-<span class="r5">    </span>│ Working point of the tagger you use                                                      │    
-<span class="r5">    </span>│ Values: HOTVR, wp1, wp1_btag, wp2, wp2_btag, wp3, wp3_btag, wp4, wp4_btag, wp5, wp5_btag │    
-<span class="r5">    </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
+<span class="r5">├── </span>📈 <span class="r3">Top_tagging_PUPPI_notmerged_NoMassCut</span> (v1)                                                   
+<span class="r5">│   </span>Scale factor for Top tagging algorithm                                                          
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 66                                                           
+<span class="r5">│   </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                                                               │    
+<span class="r5">│   </span>│ eta of the jet                                                                           │    
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)                                                                       │    
+<span class="r5">│   </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
+<span class="r5">│   </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
+<span class="r5">│   </span>│ <span class="r3">pt</span> (real)                                                                                │    
+<span class="r5">│   </span>│ pT of the jet                                                                            │    
+<span class="r5">│   </span>│ Range: [-640.0, 5940.0), overflow ok                                                     │    
+<span class="r5">│   </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
+<span class="r5">│   </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)                                                                      │    
+<span class="r5">│   </span>│ systematics: nom, up, down                                                               │    
+<span class="r5">│   </span>│ Values: down, nom, up                                                                    │    
+<span class="r5">│   </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
+<span class="r5">│   </span>╭──────────────────────────────────────── ▶ input ─────────────────────────────────────────╮    
+<span class="r5">│   </span>│ <span class="r3">workingpoint</span> (string)                                                                    │    
+<span class="r5">│   </span>│ Working point of the tagger you use                                                      │    
+<span class="r5">│   </span>│ Values: HOTVR, wp1, wp1_btag, wp2, wp2_btag, wp3, wp3_btag, wp4, wp4_btag, wp5, wp5_btag │    
+<span class="r5">│   </span>╰──────────────────────────────────────────────────────────────────────────────────────────╯    
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Gluon_Pythia</span> (v1)                                                                            
+<span class="r5">│   </span>Scale factor for gluons in pythia                                                               
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 1, <span class="r3">Binning</span>: 12, <span class="r3">Formula</span>: 6                                               
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭───────────── ▶ input ─────────────╮                            
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                         │                            
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                     │                            
+<span class="r5">│   </span>│ Range: [-2.0, 2.0)         │ │ Range: [0.0, 1000.0), overflow ok │                            
+<span class="r5">│   </span>╰────────────────────────────╯ ╰───────────────────────────────────╯                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭───────────── ▶ input ─────────────╮                            
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">discriminant</span> (real)               │                            
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ The discriminated value           │                            
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Range: [-inf, inf), overflow ok   │                            
+<span class="r5">│   </span>╰────────────────────────────╯ ╰───────────────────────────────────╯                            
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">JMS</span> (v1)                                                                                     
+<span class="r5">│   </span>SoftDrop mass scale correction                                                                  
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 1, <span class="r3">Binning</span>: 12, <span class="r3">Formula</span>: 9                                               
+<span class="r5">│   </span>╭───── ▶ input ──────╮ ╭──────────── ▶ input ────────────╮ ╭───────── ▶ input ──────────╮       
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)         │ │ <span class="r3">pt</span> (real)                       │ │ <span class="r3">systematic</span> (string)        │       
+<span class="r5">│   </span>│ eta of the jet     │ │ pT of the jet                   │ │ systematics: nom, up, down │       
+<span class="r5">│   </span>│ Range: [-2.4, 2.4) │ │ Range: [-inf, inf), overflow ok │ │ Values: down, nom, up      │       
+<span class="r5">│   </span>╰────────────────────╯ ╰─────────────────────────────────╯ ╰────────────────────────────╯       
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP35</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP35                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP40</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP40                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP43DDT</span> (v1)                                                                    
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP43DDT                                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP45CHS</span> (v1)                                                                    
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP45CHS                                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP55</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP55                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016HP60CHS</span> (v1)                                                                    
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016HP60CHS                                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMR</span> (v1)                                                                        
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMR                                         │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMR43DDT</span> (v1)                                                                   
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMR43DDT                                    │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMRCHS</span> (v1)                                                                     
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMRCHS                                      │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMS</span> (v1)                                                                        
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMS                                         │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMS43DDT</span> (v1)                                                                   
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMS43DDT                                    │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016JMSCHS</span> (v1)                                                                     
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016JMSCHS                                      │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016LP35</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016LP35                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016LP40</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016LP40                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016LP43DDT</span> (v1)                                                                    
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016LP43DDT                                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016LP45CHS</span> (v1)                                                                    
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016LP45CHS                                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">Wtagging_2016LP55</span> (v1)                                                                       
+<span class="r5">│   </span>Scale factor for W tagging                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 6                                                            
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                 │ │ <span class="r3">pt</span> (real)                                               │      
+<span class="r5">│   </span>│ eta of the jet             │ │ pT of the jet                                           │      
+<span class="r5">│   </span>│ Range: [-2.4, 2.4)         │ │ Range: [200.0, 1000.0), overflow ok                     │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭───────── ▶ input ──────────╮ ╭──────────────────────── ▶ input ────────────────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)        │ │ <span class="r3">workingpoint</span> (string)                                   │      
+<span class="r5">│   </span>│ systematics: nom, up, down │ │ Working point of the tagger you use (tau21 requirement) │      
+<span class="r5">│   </span>│ Values: down, nom, up      │ │ Values: 2016LP55                                        │      
+<span class="r5">│   </span>╰────────────────────────────╯ ╰─────────────────────────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">├── </span>📈 <span class="r3">PUJetID_eff</span> (v1)                                                                             
+<span class="r5">│   </span>Scale factor for PUJetID algorithm 80(80), 90(90) and 99(95)% efficiency for eta&lt;2.5(&gt;2.5) for  
+<span class="r5">│   </span>quark jets                                                                                      
+<span class="r5">│   </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 135                                                          
+<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
+<span class="r5">│   </span>│ <span class="r3">eta</span> (real)                                     │ │ <span class="r3">pt</span> (real)                           │      
+<span class="r5">│   </span>│ eta of the jet                                 │ │ pT of the jet                       │      
+<span class="r5">│   </span>│ Range: [-5.833333333333333, 5.833333333333334) │ │ Range: [8.0, 57.0), overflow ok     │      
+<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
+<span class="r5">│   </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
+<span class="r5">│   </span>│ <span class="r3">systematic</span> (string)                            │ │ <span class="r3">workingpoint</span> (string)               │      
+<span class="r5">│   </span>│ systematics: nom, up, down                     │ │ Working point of the tagger you use │      
+<span class="r5">│   </span>│ Values: down, nom, up                          │ │ Values: L, M, T                     │      
+<span class="r5">│   </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
+<span class="r5">│   </span>╭─── ◀ output ───╮                                                                              
+<span class="r5">│   </span>│ <span class="r3">weight</span> (real)  │                                                                              
+<span class="r5">│   </span>│ <span class="r4">No description</span> │                                                                              
+<span class="r5">│   </span>╰────────────────╯                                                                              
+<span class="r5">└── </span>📈 <span class="r3">PUJetID_mis</span> (v1)                                                                             
+<span class="r5">    </span>Scale factor for PUJetID algorithm 80(80), 90(90) and 99(95)% efficiency for eta&lt;2.5(&gt;2.5) for  
+<span class="r5">    </span>quark jets                                                                                      
+<span class="r5">    </span>Node counts: <span class="r3">Category</span>: 4, <span class="r3">Binning</span>: 135                                                          
+<span class="r5">    </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
+<span class="r5">    </span>│ <span class="r3">eta</span> (real)                                     │ │ <span class="r3">pt</span> (real)                           │      
+<span class="r5">    </span>│ eta of the jet                                 │ │ pT of the jet                       │      
+<span class="r5">    </span>│ Range: [-5.833333333333333, 5.833333333333334) │ │ Range: [8.0, 57.0), overflow ok     │      
+<span class="r5">    </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
+<span class="r5">    </span>╭─────────────────── ▶ input ────────────────────╮ ╭────────────── ▶ input ──────────────╮      
+<span class="r5">    </span>│ <span class="r3">systematic</span> (string)                            │ │ <span class="r3">workingpoint</span> (string)               │      
+<span class="r5">    </span>│ systematics: nom, up, down                     │ │ Working point of the tagger you use │      
+<span class="r5">    </span>│ Values: down, nom, up                          │ │ Values: L, M, T                     │      
+<span class="r5">    </span>╰────────────────────────────────────────────────╯ ╰─────────────────────────────────────╯      
 <span class="r5">    </span>╭─── ◀ output ───╮                                                                              
 <span class="r5">    </span>│ <span class="r3">weight</span> (real)  │                                                                              
 <span class="r5">    </span>│ <span class="r4">No description</span> │                                                                              

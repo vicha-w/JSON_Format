@@ -29,8 +29,8 @@ def create_corr(year_="2016"):
     df = pd.DataFrame( dataInfo )
     df['ptMin'] = df['ptMin'].astype(int)
     df['ptMax'] = df['ptMax'].astype(int)
-    df['etaMin'] = df['ptMin'].astype(float)
-    df['etaMax'] = df['ptMax'].astype(float)
+    df['etaMin'] = df['etaMin'].astype(float)
+    df['etaMax'] = df['etaMax'].astype(float)
     
     corr_qg_part = Correction.parse_obj(
         {

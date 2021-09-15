@@ -2,8 +2,8 @@
     "schema_version": 2,
     "corrections": [
         {
-            "name": "DeepAK8_Top_Nominal",
-            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle Top",
+            "name": "Wtagging_2017HP43DDT",
+            "description": "Scale factor for W tagging",
             "version": 1,
             "inputs": [
                 {
@@ -24,7 +24,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (QCD misidentification rate)"
+                    "description": "Working point of the tagger you use (tau21 requirement)"
                 }
             ],
             "output": {
@@ -42,126 +42,24 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.89,
-                                                    1.0,
-                                                    0.97,
-                                                    0.92
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "0p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.89,
-                                                    1.06,
-                                                    1.0,
-                                                    0.99
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "1p0",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.97,
-                                                    1.06,
-                                                    0.99,
-                                                    1.0
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "2p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.05,
-                                                    1.03,
-                                                    1.0,
-                                                    1.02
+                                                    0.955
                                                 ],
                                                 "flow": "clamp"
                                             }
@@ -179,126 +77,24 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.96,
-                                                    1.04,
-                                                    1.01,
-                                                    0.9700000000000001
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "0p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.95,
-                                                    1.1,
-                                                    1.03,
-                                                    1.04
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "1p0",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.04,
-                                                    1.1,
-                                                    1.02,
-                                                    1.05
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "2p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.1400000000000001,
-                                                    1.04,
-                                                    1.03,
-                                                    1.05
+                                                    1.076
                                                 ],
                                                 "flow": "clamp"
                                             }
@@ -316,126 +112,24 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.96,
-                                                    1.04,
-                                                    1.01,
-                                                    0.9700000000000001
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "0p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.96,
-                                                    1.1,
-                                                    1.03,
-                                                    1.04
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "1p0",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.04,
-                                                    1.08,
-                                                    1.02,
-                                                    1.05
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "2p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.1400000000000001,
-                                                    1.04,
-                                                    1.02,
-                                                    1.05
+                                                    1.076
                                                 ],
                                                 "flow": "clamp"
                                             }
@@ -450,8 +144,8 @@
             }
         },
         {
-            "name": "DeepAK8_Top_MassDecorr",
-            "description": "Scale factor for DeepAK8 algorithm (nominal and mass decorrelated) for particle Top",
+            "name": "Wtagging_2017HP45",
+            "description": "Scale factor for W tagging",
             "version": 1,
             "inputs": [
                 {
@@ -472,7 +166,7 @@
                 {
                     "name": "workingpoint",
                     "type": "string",
-                    "description": "Working point of the tagger you use (QCD misidentification rate)"
+                    "description": "Working point of the tagger you use (tau21 requirement)"
                 }
             ],
             "output": {
@@ -490,126 +184,24 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP45",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.81,
-                                                    0.93,
-                                                    0.96,
-                                                    0.93
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "0p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.9,
-                                                    0.97,
-                                                    0.98,
-                                                    0.95
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "1p0",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.96,
-                                                    1.0,
-                                                    0.98,
-                                                    0.99
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "2p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.97,
-                                                    1.0,
-                                                    0.98,
-                                                    0.98
+                                                    0.97
                                                 ],
                                                 "flow": "clamp"
                                             }
@@ -627,126 +219,24 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP45",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.8800000000000001,
-                                                    0.9800000000000001,
-                                                    1.0,
-                                                    0.9800000000000001
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "0p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    0.9500000000000001,
-                                                    1.0,
-                                                    1.01,
-                                                    0.98
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "1p0",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.0,
-                                                    1.03,
-                                                    1.0,
-                                                    1.02
-                                                ],
-                                                "flow": "clamp"
-                                            }
-                                        ],
-                                        "flow": "error"
-                                    }
-                                },
-                                {
-                                    "key": "2p5",
-                                    "value": {
-                                        "nodetype": "binning",
-                                        "input": "eta",
-                                        "edges": [
-                                            -2.5,
-                                            2.5
-                                        ],
-                                        "content": [
-                                            {
-                                                "nodetype": "binning",
-                                                "input": "pt",
-                                                "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
-                                                ],
-                                                "content": [
-                                                    1.0,
-                                                    1.02,
-                                                    1.0,
-                                                    1.01
+                                                    1.03
                                                 ],
                                                 "flow": "clamp"
                                             }
@@ -764,126 +254,876 @@
                             "input": "workingpoint",
                             "content": [
                                 {
-                                    "key": "0p1",
+                                    "key": "2017HP45",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.8800000000000001,
-                                                    0.9800000000000001,
-                                                    1.02,
-                                                    0.9800000000000001
+                                                    1.03
                                                 ],
                                                 "flow": "clamp"
                                             }
                                         ],
                                         "flow": "error"
                                     }
-                                },
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017JMR43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
                                 {
-                                    "key": "0p5",
+                                    "key": "2017JMR43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    0.9500000000000001,
-                                                    1.0,
-                                                    1.01,
-                                                    0.98
+                                                    1.08
                                                 ],
                                                 "flow": "clamp"
                                             }
                                         ],
                                         "flow": "error"
                                     }
-                                },
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
                                 {
-                                    "key": "1p0",
+                                    "key": "2017JMR43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    1.0,
-                                                    1.03,
-                                                    1.0,
-                                                    1.02
+                                                    1.161
                                                 ],
                                                 "flow": "clamp"
                                             }
                                         ],
                                         "flow": "error"
                                     }
-                                },
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
                                 {
-                                    "key": "2p5",
+                                    "key": "2017JMR43DDT",
                                     "value": {
                                         "nodetype": "binning",
                                         "input": "eta",
                                         "edges": [
-                                            -2.5,
-                                            2.5
+                                            -2.4,
+                                            2.4
                                         ],
                                         "content": [
                                             {
                                                 "nodetype": "binning",
                                                 "input": "pt",
                                                 "edges": [
-                                                    300.0,
-                                                    400.0,
-                                                    480.0,
-                                                    600.0,
-                                                    1200.0
+                                                    200.0,
+                                                    1000.0
                                                 ],
                                                 "content": [
-                                                    1.0,
-                                                    1.02,
-                                                    1.0,
-                                                    1.01
+                                                    1.161
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017JMR45",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMR45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.09
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMR45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1400000000000001
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMR45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1400000000000001
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017JMS43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.983
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.99
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.99
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017JMS45",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.982
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.986
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017JMS45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.986
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017LP43DDT",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.003
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.011
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP43DDT",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.011
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Wtagging_2017LP45",
+            "description": "Scale factor for W tagging",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use (tau21 requirement)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.14
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.43
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "2017LP45",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.4,
+                                            2.4
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.43
                                                 ],
                                                 "flow": "clamp"
                                             }

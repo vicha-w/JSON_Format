@@ -41,9 +41,8 @@
                             "nodetype": "binning",
                             "input": "eta",
                             "edges": [
-                                0.0,
-                                30.0,
-                                1000.0
+                                -2.0,
+                                2.0
                             ],
                             "content": [
                                 {
@@ -51,7 +50,8 @@
                                     "input": "pt",
                                     "edges": [
                                         0.0,
-                                        30.0
+                                        30.0,
+                                        1000.0
                                     ],
                                     "content": [
                                         {
@@ -73,18 +73,7 @@
                                                 }
                                             ],
                                             "flow": "clamp"
-                                        }
-                                    ],
-                                    "flow": "clamp"
-                                },
-                                {
-                                    "nodetype": "binning",
-                                    "input": "pt",
-                                    "edges": [
-                                        30.0,
-                                        1000.0
-                                    ],
-                                    "content": [
+                                        },
                                         {
                                             "nodetype": "binning",
                                             "input": "discriminant",
@@ -118,9 +107,8 @@
                             "nodetype": "binning",
                             "input": "eta",
                             "edges": [
-                                0.0,
-                                30.0,
-                                1000.0
+                                -2.0,
+                                2.0
                             ],
                             "content": [
                                 {
@@ -128,7 +116,8 @@
                                     "input": "pt",
                                     "edges": [
                                         0.0,
-                                        30.0
+                                        30.0,
+                                        1000.0
                                     ],
                                     "content": [
                                         {
@@ -150,18 +139,7 @@
                                                 }
                                             ],
                                             "flow": "clamp"
-                                        }
-                                    ],
-                                    "flow": "clamp"
-                                },
-                                {
-                                    "nodetype": "binning",
-                                    "input": "pt",
-                                    "edges": [
-                                        30.0,
-                                        1000.0
-                                    ],
-                                    "content": [
+                                        },
                                         {
                                             "nodetype": "binning",
                                             "input": "discriminant",
@@ -195,9 +173,8 @@
                             "nodetype": "binning",
                             "input": "eta",
                             "edges": [
-                                0.0,
-                                30.0,
-                                1000.0
+                                -2.0,
+                                2.0
                             ],
                             "content": [
                                 {
@@ -205,7 +182,8 @@
                                     "input": "pt",
                                     "edges": [
                                         0.0,
-                                        30.0
+                                        30.0,
+                                        1000.0
                                     ],
                                     "content": [
                                         {
@@ -227,18 +205,7 @@
                                                 }
                                             ],
                                             "flow": "clamp"
-                                        }
-                                    ],
-                                    "flow": "clamp"
-                                },
-                                {
-                                    "nodetype": "binning",
-                                    "input": "pt",
-                                    "edges": [
-                                        30.0,
-                                        1000.0
-                                    ],
-                                    "content": [
+                                        },
                                         {
                                             "nodetype": "binning",
                                             "input": "discriminant",

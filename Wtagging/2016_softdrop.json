@@ -1,0 +1,265 @@
+{
+    "schema_version": 2,
+    "corrections": [
+        {
+            "name": "JMS",
+            "description": "SoftDrop mass scale correction",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                -2.4,
+                                -1.3,
+                                1.3,
+                                2.4
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.0930197734452352+-0.00015006788774298745*x+3.4486611503791434e-07*pow(x,2)+-2.681003093847412e-10*pow(x,3)+8.674402290776817e-14*pow(x,4)+-1.0011358570698617e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                -2.4,
+                                -1.3,
+                                1.3,
+                                2.4
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.0930197734452352+-0.00015006788774298745*x+3.4486611503791434e-07*pow(x,2)+-2.681003093847412e-10*pow(x,3)+8.674402290776817e-14*pow(x,4)+-1.0011358570698617e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "eta",
+                            "edges": [
+                                -2.4,
+                                -1.3,
+                                1.3,
+                                2.4
+                            ],
+                            "content": [
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.0930197734452352+-0.00015006788774298745*x+3.4486611503791434e-07*pow(x,2)+-2.681003093847412e-10*pow(x,3)+8.674402290776817e-14*pow(x,4)+-1.0011358570698617e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                },
+                                {
+                                    "nodetype": "binning",
+                                    "input": "pt",
+                                    "edges": [
+                                        200.0,
+                                        3200.0
+                                    ],
+                                    "content": [
+                                        {
+                                            "nodetype": "formula",
+                                            "expression": "1.2721151537214315+-0.0005716403627542301*x+8.372894123074334e-07*pow(x,2)+-5.204332049858346e-10*pow(x,3)+1.4537520981877012e-13*pow(x,4)+-1.5038869243803616e-17*pow(x,5)",
+                                            "parser": "TFormula",
+                                            "variables": [
+                                                "pt"
+                                            ],
+                                            "parameters": []
+                                        }
+                                    ],
+                                    "flow": "clamp"
+                                }
+                            ],
+                            "flow": "error"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

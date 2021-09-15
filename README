@@ -30,6 +30,9 @@ and it will print a overview of what is stored in your file.
 After all json are collected we can merge them by 
 
 correction merge YEAR_JSON1.json YEAR_JSON2.json > YEAR_jmar.json
+correction merge DeepAK8/2016_DeepAK8_*.json Toptagging/2016*.json QuarkGluon/2016_QuarkGluon.json Wtagging/2016_*.json PUJetID/2016_PUJetID.json > 2016_jmar.json
+correction merge DeepAK8/2017_DeepAK8_*.json Toptagging/2017*.json QuarkGluon/2017_QuarkGluon.json Wtagging/2017_*.json PUJetID/2017_PUJetID.json > 2017_jmar.json
+correction merge DeepAK8/2018_DeepAK8_*.json Toptagging/2018*.json QuarkGluon/2018_QuarkGluon.json Wtagging/2018_*.json PUJetID/2018_PUJetID.json > 2018_jmar.json
 
 afterwards you can look at the summary or also create an html from it
 

@@ -76,12 +76,12 @@ def build_sf(sf,syst,unc):
         value = sf.iloc[0]["scaleFactor"]
     elif "up" in syst:
         if unc:
-            value = sf.iloc[0]["scaleFactor"] * (1+sf.iloc[0]["scaleFactorSystUncty_up"])
+            value = sf.iloc[0]["scaleFactor"] +sf.iloc[0]["scaleFactorSystUncty_up"]
         else:
             value = sf.iloc[0]["scaleFactorSystUncty_up"]
     elif "down" in syst:
         if unc:
-            value = sf.iloc[0]["scaleFactor"] * (1-sf.iloc[0]["scaleFactorSystUncty_down"])
+            value = sf.iloc[0]["scaleFactor"] +sf.iloc[0]["scaleFactorSystUncty_down"]
         else:
             value = sf.iloc[0]["scaleFactorSystUncty_down"]
     else:
@@ -93,13 +93,40 @@ def build_sf(sf,syst,unc):
 
 
 
-def build_formula(sf,syst):
+def build_formula(sf,syst,inp = "discriminant"):
     if len(sf) != 1:
         raise ValueError(sf)
     
     value=-99
     if "nom" in syst:
         value = sf.iloc[0]["formula"]
+    elif "up" in syst:
+        value = sf.iloc[0]["formula_up"]
+    elif "down" in syst:
+        value = sf.iloc[0]["formula_down"]
+    else:
+        raise ValueError("No valid syst: nom, up, down")
+
+    if "x" in value:
+        return Formula.parse_obj(
+            {
+                "nodetype": "formula",
+                "expression": value,
+                "parser": "TFormula",
+                "variables": [inp],
+                "parameters": [],
+            }
+        )
+    else:
+        return float(value)
+
+def build_softdrop_formula(sf,syst):
+    if len(sf) != 1:
+        raise ValueError(sf)
+    
+    value=-99
+    if "nom" in syst:
+        value = sf.iloc[0]["corr"] 
     elif "up" in syst:
         value = sf.iloc[0]["formula_up"]
     elif "down" in syst:
@@ -138,22 +165,32 @@ def build_discrbinning(sf,syst):
     )
 
 
-def build_pts(sf,syst):
+def build_pts(sf,syst,withDisc):
     edges = sorted(set(sf["ptMin"]) | set(sf["ptMax"]))
+    content=[]
+    if withDisc:
+        content = [
+                build_discrbinning(sf[(sf["ptMin"] >= lo) & (sf["ptMax"] <= hi)],syst)
+                for lo, hi in zip(edges[:-1], edges[1:])
+            ]
+
+    else:
+        content = [
+                build_formula(sf[(sf["ptMin"] >= lo) & (sf["ptMax"] <= hi)],"nom","pt")
+                for lo, hi in zip(edges[:-1], edges[1:])
+            ]
+
     return Binning.parse_obj(
         {
             "nodetype": "binning",
             "input": "pt",
             "edges": edges,
-            "content": [
-                build_discrbinning(sf[(sf["ptMin"] >= lo) & (sf["ptMax"] <= hi)],syst)
-                for lo, hi in zip(edges[:-1], edges[1:])
-            ],
+            "content": content,
             "flow": "clamp",
         }
     )
 
-def build_etas(sf,syst="nom"):
+def build_etas(sf,syst="nom",withDiscr = True):
     edges = sorted(set(sf["etaMin"]) | set(sf["etaMax"]))
     return Binning.parse_obj(
         {
@@ -161,22 +198,22 @@ def build_etas(sf,syst="nom"):
             "input": "eta",
             "edges": edges,
             "content": [
-                build_pts(sf[(sf["etaMin"] >= lo) & (sf["etaMax"] <= hi)],syst)
+                build_pts(sf[(sf["etaMin"] >= lo) & (sf["etaMax"] <= hi)],syst,withDiscr)
                 for lo, hi in zip(edges[:-1], edges[1:])
             ],
             "flow": "error",
         }
     )
 
-def build_systs_formular(sf):
+def build_systs_formular(sf,withDisc = True):
     return Category.parse_obj(
         {
             "nodetype": "category",
             "input": "systematic",
             "content": [
-                {"key": "nom", "value": build_etas(sf)},
-                {"key": "up", "value": build_etas(sf,"up")},
-                {"key": "down", "value": build_etas(sf,"down")}
+                {"key": "nom", "value": build_etas(sf,"nom",withDisc)},
+                {"key": "up", "value": build_etas(sf,"up",withDisc)},
+                {"key": "down", "value": build_etas(sf,"down",withDisc)}
             ],
         }
     )
