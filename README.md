@@ -1,8 +1,9 @@
-#JSON Format for JMAR
+# JSON Format for JMAR
 
 This is a repo to produce the JSON format for CMS based on:
 
 [jsonpog-integration](https://gitlab.cern.ch/cms-nanoAOD/jsonpog-integration)
+
 [correctionlib](https://github.com/cms-nanoAOD/correctionlib)
 
 Once you log into a CERN/DESY machine use
