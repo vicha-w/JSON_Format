@@ -3,7 +3,7 @@
     "corrections": [
         {
             "name": "Wtagging_2018HP35",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for  (2018HP35): year=2018, HP, tau21<0.35, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -145,7 +145,7 @@
         },
         {
             "name": "Wtagging_2018HP43DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for (decorrelated tau21 = tau21DDT) (2018HP43DDT): year=2018, HP, tau21DDT<0.43, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -287,7 +287,7 @@
         },
         {
             "name": "Wtagging_2018HP45",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for  (2018HP45): year=2018, HP, tau21<0.45, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -429,7 +429,7 @@
         },
         {
             "name": "Wtagging_2018HP50DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for (decorrelated tau21 = tau21DDT) (2018HP50DDT): year=2018, HP, tau21DDT<0.50, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -571,7 +571,7 @@
         },
         {
             "name": "Wtagging_2018JMR35",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass resolution SF for 2018 for wp 2018JMR35:  tau21<0.35 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -713,7 +713,7 @@
         },
         {
             "name": "Wtagging_2018JMR43DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass resolution SF for 2018 for wp 2018JMR43DDT: (decorrelated tau21 = tau21DDT) tau21DDT<0.43 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -855,7 +855,7 @@
         },
         {
             "name": "Wtagging_2018JMR45",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass resolution SF for 2018 for wp 2018JMR45:  tau21<0.45 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -997,7 +997,7 @@
         },
         {
             "name": "Wtagging_2018JMR50DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass resolution SF for 2018 for wp 2018JMR50DDT: (decorrelated tau21 = tau21DDT) tau21DDT<0.50 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1139,7 +1139,7 @@
         },
         {
             "name": "Wtagging_2018JMS35",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass scale SF for 2018 for wp 2018JMS35:  tau21<0.35 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1281,7 +1281,7 @@
         },
         {
             "name": "Wtagging_2018JMS43DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass scale SF for 2018 for wp 2018JMS43DDT: (decorrelated tau21 = tau21DDT) tau21DDT<0.43 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1423,7 +1423,7 @@
         },
         {
             "name": "Wtagging_2018JMS45",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass scale SF for 2018 for wp 2018JMS45:  tau21<0.45 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1565,7 +1565,7 @@
         },
         {
             "name": "Wtagging_2018JMS50DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Jet mass scale SF for 2018 for wp 2018JMS50DDT: (decorrelated tau21 = tau21DDT) tau21DDT<0.50 PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1707,7 +1707,7 @@
         },
         {
             "name": "Wtagging_2018LP35",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for  (2018LP35): year=2018, LP, tau21>0.35, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1849,7 +1849,7 @@
         },
         {
             "name": "Wtagging_2018LP43DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for (decorrelated tau21 = tau21DDT) (2018LP43DDT): year=2018, LP, tau21DDT>0.43, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -1991,7 +1991,7 @@
         },
         {
             "name": "Wtagging_2018LP45",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for  (2018LP45): year=2018, LP, tau21>0.45, PUPPI",
             "version": 1,
             "inputs": [
                 {
@@ -2133,7 +2133,7 @@
         },
         {
             "name": "Wtagging_2018LP50DDT",
-            "description": "Scale factor for W tagging",
+            "description": "Scale factor for W tagging for (decorrelated tau21 = tau21DDT) (2018LP50DDT): year=2018, LP, tau21DDT>0.50, PUPPI",
             "version": 1,
             "inputs": [
                 {

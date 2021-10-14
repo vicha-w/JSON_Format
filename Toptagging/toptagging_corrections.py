@@ -101,7 +101,7 @@ def create_corr(year_="2016"):
                 {"name": "eta", "type": "real", "description": "eta of the jet"},
                 {"name": "pt", "type": "real", "description": "pT of the jet"},
                 {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
-                        {"name": "workingpoint", "type": "string", 'description': 'Working point of the tagger you use'}
+                        {"name": "workingpoint", "type": "string", 'description': 'Working point of the tagger you use [without DeepCSV loose]: HOTVR, wp1[_btag] (tau32 <0.40), wp2[_btag] (tau32< 0.46), wp3[_btag] (tau32< 0.54), wp4[_btag] (tau32< 0.65), wp5[_btag] (tau32< 0.80) [https://twiki.cern.ch/twiki/bin/view/CMS/JetTopTagging]'}
                     ],
                     "output": {"name": "weight", "type": "real"},
                     "data": hf.build_systs(df, False),

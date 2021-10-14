@@ -6,6 +6,7 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import helperfunctionsv2 as hf
 import gzip
+import re
 
 bprintouts=False
 
@@ -45,13 +46,30 @@ def create_corr(year = "2016"):
         df_part = df[df["year"]==year]
         df_part = df_part[df_part["workingPoint"]==wp]
 
-        print("Create data struction in json format")
-    
+        print("Create data structure in json format")
+        numbers = re.findall(r'\d+',wp)
+        puppivschs="PUPPI"
+        if "CHS" in wp: puppivschs="CHS"
+        hpvslp="HP"
+        if "LP" in wp: hpvslp="LP"
+        tau21req = "no tau21 reqruiement"
+        if len(numbers)>1:
+            tau21req = "tau21<0."+str(numbers[1])
+            if "LP"in wp: tau21req = "tau21>0."+str(numbers[1])
+        taudecorr = ""
+        if "DDT" in wp: 
+            taudecorr="(decorrelated tau21 = tau21DDT)"
+            tau21req = "tau21DDT" + tau21req[5:]
+        description = "Scale factor for W tagging for "+taudecorr+" ("+wp+"): year="+str(numbers[0])+", "+hpvslp+", "+ tau21req+", "+puppivschs
+        if "JMS" in wp: description = "Jet mass scale SF for "+year+" for wp "+wp+": "+taudecorr+" "+tau21req + " "+puppivschs
+        if "JMR" in wp: description = "Jet mass resolution SF for "+year+" for wp "+wp+": "+taudecorr+" "+tau21req + " "+puppivschs
+        print(description)
+
         corr_wtagging_part = Correction.parse_obj(
         {
             "version": 1,
             "name": "Wtagging_"+wp,
-            "description": "Scale factor for W tagging",
+            "description": description,
             "inputs": [
                 {"name": "eta", "type": "real", "description": "eta of the jet"},
                 {"name": "pt", "type": "real", "description": "pT of the jet"},
