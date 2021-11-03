@@ -1,0 +1,2029 @@
+{
+    "schema_version": 2,
+    "corrections": [
+        {
+            "name": "Top_tagging_PUPPI_FullyMerged",
+            "description": "Scale factor for Top tagging algorithm",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use [with DeepCSV loose]: wp0p38_vt[_btag](tau32<0.38, vt, mis = 0.001), wp0p47_t[_btag](tau32<0.47, t, mis = 0.005), wp0p52_m[_btag](tau32<0.52, m, mis = 0.010), wp0p61_l[_btag](tau32<0.61, l, mis = 0.025), wp0p69_vl[_btag](tau32<0.69, vl, mis = 0.050), HOTVR(tau32<0.56),  (from https://twiki.cern.ch/twiki/bin/view/CMS/JetTopTagging)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0391278796190042,
+                                                    0.9739978994742675,
+                                                    0.9634316799565199,
+                                                    0.9119985255039493,
+                                                    0.9048852062794277,
+                                                    0.9998817914738505
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8069816003451249,
+                                                    0.837017453490505
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8075554653602179,
+                                                    0.8709639916842373
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8225996408712839,
+                                                    0.8851026541689981
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8534375978839106,
+                                                    0.9042686076020918
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8758402301118318,
+                                                    0.9138420283232234
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9034064655457683,
+                                                    0.9230681409322394
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8998239761476665,
+                                                    0.93775570880373
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.914021028541461,
+                                                    0.9505104941657694
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9663293060140845,
+                                                    0.9686934928519533
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.968436563204242,
+                                                    0.978455321663271
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0836797153885012,
+                                                    1.0044175269887907,
+                                                    0.9830200052119609,
+                                                    0.9367133137687427,
+                                                    0.9365530040346279,
+                                                    1.0478564341051246
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8668938417993346,
+                                                    0.8699330595150963
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8708249020058553,
+                                                    0.9052514483946354
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8671124890926178,
+                                                    0.9102572628906966
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9005781957313432,
+                                                    0.9308153383208082
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9166172920737666,
+                                                    0.9366264164928217
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9467680268900912,
+                                                    0.9480966726071249
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9359816083594302,
+                                                    0.9572956987284784
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9535882560033225,
+                                                    0.9717534663799865
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0050039542184792,
+                                                    0.9878905338019929
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0077719544833343,
+                                                    0.999829056732915
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.994327260160183,
+                                                    0.9435789327185257,
+                                                    0.9439777948579233,
+                                                    0.8876289585243262,
+                                                    0.8740292630749801,
+                                                    0.9533569074797248
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.7488735452893441,
+                                                    0.8047737403969596
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.7458877144275456,
+                                                    0.8374309957111686
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.778886062592366,
+                                                    0.8601610909319021
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8071726974734109,
+                                                    0.8784128714914611
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8352533431552371,
+                                                    0.8913842939032425
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8611156357687881,
+                                                    0.8986654593287098
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8642182773535152,
+                                                    0.9186303277771585
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8750399053514132,
+                                                    0.9297240520891462
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9283877783552541,
+                                                    0.9499883026661584
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9297407172663703,
+                                                    0.957619499706265
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Top_tagging_PUPPI_NotMerged",
+            "description": "Scale factor for Top tagging algorithm",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "eta",
+                    "type": "real",
+                    "description": "eta of the jet"
+                },
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                },
+                {
+                    "name": "workingpoint",
+                    "type": "string",
+                    "description": "Working point of the tagger you use [with DeepCSV loose]: wp0p38_vt[_btag](tau32<0.38, vt, mis = 0.001), wp0p47_t[_btag](tau32<0.47, t, mis = 0.005), wp0p52_m[_btag](tau32<0.52, m, mis = 0.010), wp0p61_l[_btag](tau32<0.61, l, mis = 0.025), wp0p69_vl[_btag](tau32<0.69, vl, mis = 0.050), HOTVR(tau32<0.56),  (from https://twiki.cern.ch/twiki/bin/view/CMS/JetTopTagging)"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real"
+            },
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9230457831391428,
+                                                    0.9087747433469748,
+                                                    0.9808801420648621,
+                                                    1.1135659822929938,
+                                                    1.1014453060267653,
+                                                    1.1550645584893022
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.6174166527998302,
+                                                    0.7368980280383004
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.7326207835166856,
+                                                    0.48388581244328466
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0574234804780434,
+                                                    0.8640465803788933
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0669253681728772,
+                                                    0.8014034954521776
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0611717594014596,
+                                                    0.863791925072702
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.0488518105317841,
+                                                    0.8385195953040225
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1444399493852606,
+                                                    1.078915195817323
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.157228652919665,
+                                                    1.0926039880006864
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.13868963154605,
+                                                    1.1233314559170424
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1578717551932853,
+                                                    1.1556035847684707
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.004136520904017,
+                                                    0.9766152088837166,
+                                                    1.0333647724616228,
+                                                    1.187545187394914,
+                                                    1.1780547459435777,
+                                                    1.2612163145483226
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.7975273588043984,
+                                                    0.9923406888175047
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9691954900214429,
+                                                    0.7644623510093489
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1479677184827568,
+                                                    1.0001431112586707
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1782593331923636,
+                                                    0.9674694547739512
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1306306310137588,
+                                                    0.9657218231602975
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1271501308113299,
+                                                    0.9676706373669343
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1924325577806558,
+                                                    1.1397635482546002
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.2089122250392599,
+                                                    1.1722075136245134
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1732560333526805,
+                                                    1.1633980801984514
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1935818338669861,
+                                                    1.2103470330438906
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "category",
+                            "input": "workingpoint",
+                            "content": [
+                                {
+                                    "key": "HOTVR",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    200.0,
+                                                    250.0,
+                                                    300.0,
+                                                    400.0,
+                                                    480.0,
+                                                    600.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.8457270822250514,
+                                                    0.842968242224111,
+                                                    0.9296756137264676,
+                                                    1.0417574240603558,
+                                                    1.0268201057581554,
+                                                    1.0527204727797685
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.4523331627334778,
+                                                    0.5007773262368546
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p38_vt_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.5192876515357169,
+                                                    0.22676928180223366
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.970857733716833,
+                                                    0.7327246573680306
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p47_t_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9608081755519323,
+                                                    0.6424734028324174
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9942975240285797,
+                                                    0.7645694958462987
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p52_m_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    0.9736124759482399,
+                                                    0.71358084805189
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.098637919996925,
+                                                    1.019791505051759
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p61_l_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1075943073439882,
+                                                    1.0153428232702695
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1052688903846348,
+                                                    1.084924167560544
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                },
+                                {
+                                    "key": "wp0p69_vl_btag",
+                                    "value": {
+                                        "nodetype": "binning",
+                                        "input": "eta",
+                                        "edges": [
+                                            -2.5,
+                                            2.5
+                                        ],
+                                        "content": [
+                                            {
+                                                "nodetype": "binning",
+                                                "input": "pt",
+                                                "edges": [
+                                                    300.0,
+                                                    400.0,
+                                                    1000.0
+                                                ],
+                                                "content": [
+                                                    1.1234988218755595,
+                                                    1.102596705973414
+                                                ],
+                                                "flow": "clamp"
+                                            }
+                                        ],
+                                        "flow": "error"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
