@@ -62,7 +62,7 @@ def build_ptbinning(sf,syst,unc):
                 build_sf(sf[(sf["ptMin"] >= lo) & (sf["ptMax"] <= hi)],syst,unc)
                 for lo, hi in zip(edges[:-1], edges[1:])
             ],
-            "flow": "clamp",
+            "flow": "error",
         }
     )
 

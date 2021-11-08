@@ -9,6 +9,7 @@ import gzip
 import ROOT
 import ctypes
 
+
 bprintouts=False
 
 # this script depends on the 'infile' name. The root file should be inside this folder and is calles 'YEAR_TopTaggingScaleFactors.root'
@@ -86,6 +87,18 @@ def create_corr(year_="UL17"):
                     dataInfo['scaleFactorSystUncty_up'].append(y.value+tmpHistos[ih].GetErrorYhigh(ix) )
                     dataInfo['scaleFactorSystUncty_down'].append(y.value-tmpHistos[ih].GetErrorYlow(ix) )
 
+                ###### adding one last bin until pT~inf to keept the last SF
+                dataInfo['workingPoint'].append(wp)
+                x = ctypes.c_double(0.)
+                y = ctypes.c_double(0.)
+                tmpHistos[ih].GetPoint(tmpHistos[ih].GetN()-1,x,y)
+                dataInfo['ptMin'].append(x.value+tmpHistos[ih].GetErrorXlow(tmpHistos[ih].GetN()-1) )
+                dataInfo['ptMax'].append(float('inf') )
+                dataInfo['scaleFactor'].append(y.value )
+                dataInfo['Object'].append(ih )
+                dataInfo['scaleFactorSystUncty_up'].append(y.value+tmpHistos[ih].GetErrorYhigh(tmpHistos[ih].GetN()-1) )
+                dataInfo['scaleFactorSystUncty_down'].append(y.value-tmpHistos[ih].GetErrorYlow(tmpHistos[ih].GetN()-1) )
+
         
 
             dataInfo['year'] = [ year_ for el in dataInfo["scaleFactor"]]
@@ -99,9 +112,11 @@ def create_corr(year_="UL17"):
              
                 
             df = pd.DataFrame( dataInfo )
-            df['ptMin'] = df['ptMin'].astype(int)
-            df['ptMax'] = df['ptMax'].astype(int)
-            
+            # df['ptMin'] = df['ptMin'].astype(int)
+            # df['ptMax'] = df['ptMax'].astype(int)
+            df['ptMin'] = df['ptMin'].astype(float)
+            df['ptMax'] = df['ptMax'].astype(float)
+
         
             if bprintouts: 
                 print("Printing the data structure")
@@ -158,3 +173,12 @@ print("sf up is:"+str(valsf))
 
 valsf= evaluator["Top_tagging_PUPPI_FullyMerged"].evaluate(2.0,450.,"down","wp0p38_vt")
 print("sf down is:"+str(valsf))
+
+###### testing special cases
+print("testing out of pT range: pT>1000 GeV")
+valsf= evaluator["Top_tagging_PUPPI_FullyMerged"].evaluate(2.0,2000.,"nom","wp0p38_vt")
+print("sf is:"+str(valsf))
+
+# print("testing out of pT range: pT<200 GeV")
+# valsf= evaluator["Top_tagging_PUPPI_FullyMerged"].evaluate(2.0,200.,"nom","wp0p38_vt")
+# print("sf is:"+str(valsf))
