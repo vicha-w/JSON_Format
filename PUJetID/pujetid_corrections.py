@@ -10,16 +10,16 @@ import ROOT
 
 bprintouts=False
 
-infile = "PUID_80XTraining_EffSFandUncties.root"
+infile = "PUID_106XTraining_ULRun2_EffSFandUncties_v1.root"
 
 def create_corr(year= "2016"):
     print("working on "+infile)
     inputFile = ROOT.TFile.Open(infile)
 
     correction_dict = {}
-    for imiseff in range(2):
+    for imiseff in range(1):
         miseff = "eff"
-        if imiseff==1: miseff = "mis"
+#        if imiseff==1: miseff = "mis"
         
         listOfHistos = []
         if bprintouts: print("List of Workingpoints that are considered")
@@ -115,15 +115,16 @@ def create_corr(year= "2016"):
  
 
 
-create_corr("2016")
-create_corr("2017")
-create_corr("2018")
+create_corr("UL2016_")
+create_corr("UL2016APV")
+create_corr("UL2017")
+create_corr("UL2018")
 
 
 from correctionlib import _core
 
 #Download the correct JSON files 
-evaluator = _core.CorrectionSet.from_file('2016_PUJetID.json')
+evaluator = _core.CorrectionSet.from_file('UL2016__PUJetID.json')
 
 valsf= evaluator["PUJetID_eff"].evaluate(-4.5,20.,"nom","L")
 print("sf is:"+str(valsf))

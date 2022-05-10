@@ -81,7 +81,7 @@ def build_sf(sf,syst,unc):
             value = sf.iloc[0]["scaleFactorSystUncty_up"]
     elif "down" in syst:
         if unc:
-            value = sf.iloc[0]["scaleFactor"] +sf.iloc[0]["scaleFactorSystUncty_down"]
+            value = sf.iloc[0]["scaleFactor"] -sf.iloc[0]["scaleFactorSystUncty_down"]
         else:
             value = sf.iloc[0]["scaleFactorSystUncty_down"]
     else:
