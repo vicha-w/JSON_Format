@@ -56,3 +56,13 @@ correction --html 2016_jmar.html summary 2016_jmar.json
 correction --html 2017_jmar.html summary 2017_jmar.json
 correction --html 2018_jmar.html summary 2018_jmar.json
 ```
+
+
+UL campaign (only includes corrections available so far)
+
+```
+correction merge PUJetID/UL2016__PUJetID.json  > UL16postVFP_jmar.json
+correction merge PUJetID/UL2016APV_PUJetID.json  > UL16preVFP_jmar.json
+correction merge Toptagging/UL17_Toptagging.json PUJetID/UL2017_PUJetID.json  > UL17_jmar.json
+correction merge Toptagging/UL18_Toptagging.json PUJetID/UL2018_PUJetID.json  > UL18_jmar.json
+```
