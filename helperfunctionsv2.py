@@ -16,7 +16,8 @@ def build_systs(sf,unc = True):
             "content": [
                 {"key": "nom", "value": build_wp(sf)},
                 {"key": "up", "value": build_wp(sf,syst="up",unc=unc)},
-                {"key": "down", "value": build_wp(sf,syst="down",unc=unc)}
+                {"key": "down", "value": build_wp(sf,syst="down",unc=unc)},
+                {"key": "MCEff", "value": build_wp(sf,syst="MCEff",unc=unc)}
             ],
         }
     )
@@ -84,6 +85,8 @@ def build_sf(sf,syst,unc):
             value = sf.iloc[0]["scaleFactor"] -sf.iloc[0]["scaleFactorSystUncty_down"]
         else:
             value = sf.iloc[0]["scaleFactorSystUncty_down"]
+    elif "MCEff" in syst:
+        value = sf.iloc[0]["MCEff"]
     else:
         raise ValueError("No valid syst: nom, up, down")  
     

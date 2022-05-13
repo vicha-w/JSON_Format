@@ -41,15 +41,19 @@ def create_corr(year= "2016"):
         dataInfo['scaleFactor'] = []
         dataInfo['scaleFactorSystUncty_up'] = []
         dataInfo['scaleFactorSystUncty_down'] = []
+        dataInfo['MCEff'] = []
         
         tmpHistos ={}
         tmpHistos_up ={}
         tmpHistos_down ={}
+        tmpHistos_MCEff ={}
         for ih in listOfHistos:
             
             tmpHistos[ih] = inputFile.Get(ih)
             tmpHistos_up[ih] = inputFile.Get(ih+"_Systuncty")
             tmpHistos_down[ih] = inputFile.Get(ih+"_Systuncty")
+            tmpHistos_MCEff[ih] = inputFile.Get(ih.replace("sf","mc"))
+            print (ih.replace("sf","mc"))
             
             wp =ih.split('_')[-1:][0]
             print(wp)
@@ -70,6 +74,7 @@ def create_corr(year= "2016"):
                     dataInfo['Object'].append(ih )
                     dataInfo['scaleFactorSystUncty_up'].append(tmpHistos_up[ih].GetBinContent(ix,iy) )
                     dataInfo['scaleFactorSystUncty_down'].append(tmpHistos_down[ih].GetBinContent(ix,iy) )
+                    dataInfo['MCEff'].append(tmpHistos_MCEff[ih].GetBinContent(ix,iy) )
             
             
         df = pd.DataFrame( dataInfo )
@@ -93,7 +98,7 @@ def create_corr(year= "2016"):
                 "inputs": [
                 {"name": "eta", "type": "real", "description": "eta of the jet"},
                 {"name": "pt", "type": "real", "description": "pT of the jet"},
-                {"name": "systematic", "type": "string", "description": "systematics: nom, up, down"},
+                {"name": "systematic", "type": "string", "description": "systematics: nom, up, down, MCEff"},
                 {"name": "workingpoint", "type": "string", "description": "Working point of the tagger you use"}
                 ],
                 "output": {"name": "weight", "type": "real"},
@@ -134,6 +139,10 @@ print("sf up is:"+str(valsf))
 
 valsf= evaluator["PUJetID_eff"].evaluate(-4.5,20.,"down","L")
 print("sf down is:"+str(valsf))
+
+valsf= evaluator["PUJetID_eff"].evaluate(-4.5,20.,"MCEff","L")
+print("MCEff is:"+str(valsf))
+
 
 valsf= evaluator["PUJetID_eff"].evaluate(-4.5,50.,"nom","L")
 print("sf is:"+str(valsf))

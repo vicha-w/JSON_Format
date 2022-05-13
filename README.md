@@ -66,3 +66,21 @@ correction merge PUJetID/UL2016APV_PUJetID.json  > UL16preVFP_jmar.json
 correction merge Toptagging/UL17_Toptagging.json PUJetID/UL2017_PUJetID.json  > UL17_jmar.json
 correction merge Toptagging/UL18_Toptagging.json PUJetID/UL2018_PUJetID.json  > UL18_jmar.json
 ```
+
+zip them
+
+```
+gzip UL16postVFP_jmar.json
+gzip UL16preVFP_jmar.json
+gzip UL17_jmar.json
+gzip UL18_jmar.json
+```
+
+copy them to the json repo (they should not conatin the year anymore)
+
+```
+mv UL16postVFP_jmar.json.gz ../jsonpog-integration/POG/JME/2016postVFP_UL/jmar.json.gz 
+mv UL16preVFP_jmar.json.gz ../jsonpog-integration/POG/JME/2016preVFP_UL/jmar.json.gz 
+mv UL17_jmar.json.gz ../jsonpog-integration/POG/JME/2017_UL/jmar.json.gz 
+mv UL18_jmar.json.gz ../jsonpog-integration/POG/JME/2018_UL/jmar.json.gz
+```
