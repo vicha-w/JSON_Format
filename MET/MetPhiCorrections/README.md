@@ -43,7 +43,7 @@ The folder `scripts` contains the scripts that were used to create the correctio
 
 ```python CreateMETPhiCorrectionJSON_pfmet_mc.py```.
 
-A further script `TestMetPhiCorrections.py` is provided that can be use to test the correction jsons on a technical level by calling
+A further script `TestMetPhiCorrections.py` is provided that can be used to test the correction jsons on a technical level by calling
 ```
 python TestMetPhiCorrections.py metphicorr_pfmet_mc metphicorr_pfmet_mc_2018_ul.json.gz
 ```
