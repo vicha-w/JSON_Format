@@ -25,7 +25,7 @@ class MetPhiCorrectionsHelper:
     # maximum allowed phi of MET
     phi_max = 3.15
 
-    # maximum allowed number of primary vertices
+    # maximum allowed number of primary vertices - not used at the moment
     npvs_max = 1000.0
 
     # in the following, four methods are given to return correction objects for phi-corrected MET quantities (pt, phi) in simulation or data
