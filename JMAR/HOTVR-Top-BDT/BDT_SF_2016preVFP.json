@@ -1,0 +1,65 @@
+{
+    "schema_version": 2,
+    "description": "JSON file for custom HOTVR BDT top tagger scale factor. Following formats found in github.com/cms-jet/JSON_Format",
+    "corrections": [
+        {
+            "name": "HOTVR_BDT",
+            "description": "Scale factor for custom HOTVR BDT top tagger",
+            "version": 1,
+            "inputs": [
+                {
+                    "name": "pt",
+                    "type": "real",
+                    "description": "pT of the jet"
+                },
+                {
+                    "name": "systematic",
+                    "type": "string",
+                    "description": "systematics: nom, up, down"
+                }
+            ],
+            "output": {
+                "name": "weight",
+                "type": "real",
+                "description": null
+            },
+            "generic_formulas": null,
+            "data": {
+                "nodetype": "category",
+                "input": "systematic",
+                "content": [
+                    {
+                        "key": "nom",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "pt",
+                            "edges": [300, 400, 480, 600, 1200],
+                            "content": [0.9936, 0.9856, 1.0813, 1.3076],
+                            "flow": "clamp"
+                        }
+                    },
+                    {
+                        "key": "up",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "pt",
+                            "edges": [300, 400, 480, 600, 1200],
+                            "content": [1.0698, 1.0593, 1.1892, 1.6375],
+                            "flow": "clamp"
+                        }
+                    },
+                    {
+                        "key": "down",
+                        "value": {
+                            "nodetype": "binning",
+                            "input": "pt",
+                            "edges": [300, 400, 480, 600, 1200],
+                            "content": [0.9254, 0.9142, 0.9762, 1.0808],
+                            "flow": "clamp"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
